@@ -1,1 +1,368 @@
-rien
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopDakar — Boutique en ligne</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <!-- Fichier CSS externe -->
+  <link rel="stylesheet" href="boutique.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR  -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-bag-heart-fill"></i> ShopDakar
+      </a>
+
+      <!-- Bouton mobile -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Liens de navigation -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#produits">Produits</a></li>
+          <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <!-- Icône panier -->
+          <li class="nav-item ms-3">
+            <a class="btn btn-outline-warning btn-sm" href="#">
+              <i class="bi bi-cart3"></i> Panier
+              <span class="badge bg-danger ms-1">3</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!-- FIN NAVBAR  -->
+
+
+  <!--  HERO -->
+  <section id="accueil" class="hero">
+    <div class="hero-overlay">
+      <div class="container text-center text-white">
+        <p class="hero-tag">Nouvelle collection 2026</p>
+        <h1 class="hero-title">La Mode Africaine<br/>à Portée de Clic</h1>
+        <p class="hero-subtitle">Découvrez nos créations uniques, fabriquées au Sénégal avec des tissus locaux de qualité.</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="#produits" class="btn btn-warning btn-lg fw-bold px-5">
+            <i class="bi bi-bag2"></i> Acheter maintenant
+          </a>
+          <a href="#apropos" class="btn btn-outline-light btn-lg px-5">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  FIN HERO -->
+
+
+  <!--BADGES AVANTAGES -->
+  <section class="avantages py-4 bg-warning">
+    <div class="container">
+      <div class="row text-center g-3">
+        <div class="col-6 col-md-3">
+          <i class="bi bi-truck fs-3"></i>
+          <p class="mb-0 fw-bold small">Livraison gratuite<br/>dès 25 000 FCFA</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-arrow-counterclockwise fs-3"></i>
+          <p class="mb-0 fw-bold small">Retour gratuit<br/>sous 30 jours</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-shield-check fs-3"></i>
+          <p class="mb-0 fw-bold small">Paiement<br/>sécurisé</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-headset fs-3"></i>
+          <p class="mb-0 fw-bold small">Support client<br/>7j/7</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FIN BADGES  -->
+
+
+  <!-- SECTION PRODUITS -->
+  <section id="produits" class="py-5">
+    <div class="container">
+
+      <!-- Titre de section -->
+      <h2 class="section-title">Nos Produits</h2>
+
+      <!-- Filtres -->
+      <div class="text-center mb-4">
+        <button class="btn btn-dark btn-sm me-2 active-filter">Tout</button>
+        <button class="btn btn-outline-dark btn-sm me-2">Vêtements</button>
+        <button class="btn btn-outline-dark btn-sm me-2">Accessoires</button>
+        <button class="btn btn-outline-dark btn-sm">Décoration</button>
+      </div>
+
+      <!-- Grille produits — 4 colonnes desktop, 2 tablette, 1 mobile -->
+      <div class="row g-4">
+
+        <!-- Produit 1 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card product-card h-100 shadow-sm">
+            <!-- Badge promo -->
+            <span class="badge bg-danger product-badge">-20%</span>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW158ELiUYSRyNkwJ7Z0tlsa2PeV-QgknqUw&s"
+                class="card-img-top product-img" alt="Boubou Wax"/>
+            <div class="card-body d-flex flex-column">
+              <h6 class="product-name">Boubou en Wax</h6>
+              <p class="product-desc text-muted small">Boubou traditionnel en tissu wax 100% coton, disponible en plusieurs couleurs.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="product-price">18 000 FCFA</span>
+                  <span class="text-muted text-decoration-line-through small">22 500 FCFA</span>
+                </div>
+                <!-- Étoiles -->
+                <div class="stars mb-2">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <small class="text-muted">(42)</small>
+                </div>
+                <button class="btn btn-dark w-100">
+                  <i class="bi bi-cart-plus"></i> Acheter maintenant
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 2 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card product-card h-100 shadow-sm">
+            <span class="badge bg-success product-badge">Nouveau</span>
+            <img src="https://images.squarespace-cdn.com/content/v1/604127eb1a048874afdd45a2/1709753830052-MW208DSS46PUV1RRTZ3Q/sac-marron-vintage-8.jpg?format=2500w"
+                class="card-img-top product-img" alt="Sac en cuir"/>
+            <div class="card-body d-flex flex-column">
+              <h6 class="product-name">Sac en Cuir Artisanal</h6>
+              <p class="product-desc text-muted small">Sac à main fabriqué à la main par des artisans sénégalais, cuir véritable.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="product-price">35 000 FCFA</span>
+                </div>
+                <div class="stars mb-2">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <small class="text-muted">(28)</small>
+                </div>
+                <button class="btn btn-dark w-100">
+                  <i class="bi bi-cart-plus"></i> Acheter maintenant
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 3 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card product-card h-100 shadow-sm">
+            <img src="https://www.africabaie.com/wp-content/uploads/2020/08/D2U3T71X-large.jpg"
+                class="card-img-top product-img" alt="Bijoux"/>
+            <div class="card-body d-flex flex-column">
+              <h6 class="product-name">Collier en Or Africain</h6>
+              <p class="product-desc text-muted small">Collier artisanal en plaqué or, inspiré des motifs traditionnels africains.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="product-price">12 500 FCFA</span>
+                </div>
+                <div class="stars mb-2">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <small class="text-muted">(67)</small>
+                </div>
+                <button class="btn btn-dark w-100">
+                  <i class="bi bi-cart-plus"></i> Acheter maintenant
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 4 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card product-card h-100 shadow-sm">
+            <span class="badge bg-warning text-dark product-badge">Populaire</span>
+            <img src="https://i.pinimg.com/564x/8f/e9/d3/8fe9d3d0179561261558de2f481f4177.jpg"
+                class="card-img-top product-img" alt="Décoration"/>
+            <div class="card-body d-flex flex-column">
+              <h6 class="product-name">Coussin Bogolan</h6>
+              <p class="product-desc text-muted small">Coussin décoratif en tissu bogolan malien, motifs géométriques faits main.</p>
+              <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="product-price">8 000 FCFA</span>
+                </div>
+                <div class="stars mb-2">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <small class="text-muted">(35)</small>
+                </div>
+                <button class="btn btn-dark w-100">
+                  <i class="bi bi-cart-plus"></i> Acheter maintenant
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- FIN grille produits -->
+
+      <!-- Bouton voir plus -->
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-outline-dark btn-lg px-5">
+          Voir tous les produits <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <!-- FIN PRODUITS -->
+
+
+  <!--  À PROPOS  -->
+  <section id="apropos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">À Propos de ShopDakar</h2>
+      <!-- 2 colonnes : image gauche, texte droite -->
+      <div class="row align-items-center g-5">
+        <div class="col-md-6">
+          <img src="https://voyageavecnous.com/wp-content/uploads/2024/02/20240219-VISITE-DE-THIES-VILLAGE-ARTISANAL-SENEGAL-18-1024x683-1.webp"
+              class="img-fluid rounded shadow" alt="Notre atelier"/>
+        </div>
+        <div class="col-md-6">
+          <h3 class="fw-bold mb-3">Artisanat Sénégalais<br/>depuis 2018</h3>
+          <p class="text-muted">ShopDakar est né d'une passion pour l'artisanat local. Notre mission est de valoriser le savoir-faire sénégalais en le rendant accessible au monde entier grâce au e-commerce.</p>
+          <p class="text-muted">Tous nos produits sont fabriqués à la main par des artisans locaux, en utilisant des matériaux durables et des techniques traditionnelles transmises de génération en génération.</p>
+          <div class="row text-center mt-4">
+            <div class="col-4">
+              <h3 class="fw-bold text-warning">500+</h3>
+              <small class="text-muted">Produits</small>
+            </div>
+            <div class="col-4">
+              <h3 class="fw-bold text-warning">120+</h3>
+              <small class="text-muted">Artisans</small>
+            </div>
+            <div class="col-4">
+              <h3 class="fw-bold text-warning">5000+</h3>
+              <small class="text-muted">Clients</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  FIN À PROPOS -->
+
+
+  <!-- CONTACT-->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-7">
+          <form>
+            <!-- Nom et Email côte à côte sur desktop -->
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Nom</label>
+                <input type="text" class="form-control" placeholder="Votre nom" required/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Email</label>
+                <input type="email" class="form-control" placeholder="Votre email" required/>
+              </div>
+            </div>
+            <div class="mt-3">
+              <label class="form-label fw-bold">Message</label>
+              <textarea class="form-control" rows="5" placeholder="Votre message..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark w-100 mt-3">
+              <i class="bi bi-send"></i> Envoyer
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  FIN CONTACT -->
+
+
+  <!--  FOOTER  -->
+  <footer class="py-5" id="mainFooter">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Colonne 1 — Logo et description -->
+        <div class="col-md-4">
+          <h5 class="text-warning fw-bold">
+            <i class="bi bi-bag-heart-fill"></i> ShopDakar
+          </h5>
+          <p class="text-muted small mt-2">La boutique en ligne qui valorise l'artisanat sénégalais. Qualité, authenticité et livraison rapide.</p>
+        </div>
+
+        <!-- Colonne 2 — Liens rapides -->
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold mb-3">Liens rapides</h6>
+          <ul class="list-unstyled">
+            <li><a href="#accueil" class="footer-link">Accueil</a></li>
+            <li><a href="#produits" class="footer-link">Produits</a></li>
+            <li><a href="#apropos" class="footer-link">À propos</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 3 — Réseaux sociaux -->
+        <div class="col-md-4">
+          <h6 class="text-white fw-bold mb-3">Suivez-nous</h6>
+          <div class="d-flex gap-3 fs-4">
+            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Ligne de copyright -->
+      <hr class="border-secondary mt-4"/>
+      <p class="text-center text-muted small mb-0">
+        &copy; 2026 ShopDakar — Tous droits réservés
+      </p>
+    </div>
+  </footer>
+  <!-- FIN FOOTER  -->
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
