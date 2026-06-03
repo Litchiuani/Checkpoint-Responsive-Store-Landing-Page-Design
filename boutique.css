@@ -1,5 +1,235 @@
+/* 
+boutique.css — ShopDakar  
+  */
+
+/* ── GENERAL ── */
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: Arial, sans-serif;
   color: #333;
+}
+
+/* ── NAVBAR ── */
+#mainNav {
+  background-color: #1a1a2e !important;
+}
+
+.navbar-brand {
+  color: #f0ad4e !important;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #ccc !important;
+  margin: 0 6px;
+}
+
+.nav-link:hover {
+  color: #f0ad4e !important;
+}
+
+/* ── HERO ── */
+.hero {
+  /* Image de fond avec overlay sombre */
+  background: url('https://media.istockphoto.com/id/92515758/fr/photo/textile-africaine.jpg?s=612x612&w=0&k=20&c=RAIbn0uYzLQ-iLzLJt7HZhJaEWPzZEx4rv-x6lSYRU0=')
+              center/cover no-repeat;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  padding: 80px 20px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-tag {
+  font-size: 1rem;
+  color: #f0ad4e;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #ddd;
+  max-width: 550px;
+  margin: 0 auto 32px;
+}
+
+/* ── SECTION TITLE ── */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1a1a2e;
+}
+
+/* Ligne décorative sous le titre */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #f0ad4e;
+  margin: 10px auto 0;
+}
+
+/* ── FILTRES ── */
+.active-filter {
+  background-color: #1a1a2e !important;
+  color: #fff !important;
+  border-color: #1a1a2e !important;
+}
+
+/* ── PRODUCT CARDS ── */
+.product-card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+/* Effet au survol */
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Image du produit */
+.product-img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Badge promo (Nouveau, -20%, etc.) */
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+/* Nom du produit */
+.product-name {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+/* Description courte */
+.product-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Prix */
+.product-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #e94560;
+}
+
+/* Étoiles */
+.stars {
+  color: #f0ad4e;
+  font-size: 0.85rem;
+}
+
+/* Bouton Acheter maintenant */
+.product-card .btn-dark {
+  background-color: #1a1a2e;
+  border-color: #1a1a2e;
+  font-size: 0.88rem;
+}
+
+.product-card .btn-dark:hover {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+  color: #1a1a2e;
+}
+
+/* ── FOOTER ── */
+#mainFooter {
+  background-color: #1a1a2e;
+}
+
+.footer-link {
+  color: #aaa;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.footer-link:hover {
+  color: #f0ad4e;
+}
+
+.social-icon {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.social-icon:hover {
+  color: #f0ad4e;
+}
+
+/* ── MEDIA QUERIES (Responsive) ── */
+
+/* Tablette */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Produits : 2 colonnes sur tablette */
+  .product-img {
+    height: 180px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  /* Produits : 1 colonne sur mobile */
+  .product-img {
+    height: 220px;
+  }
 }
